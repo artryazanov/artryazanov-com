@@ -45,6 +45,11 @@
     </div>
 
     <div class="polaroid">
+        <img src="images/github.jpg" alt="github.com/artryazanov" />
+        <p><a href="http://github.com/artryazanov" target="_blank">GitHub</a></p>
+    </div>
+
+    <div class="polaroid">
         <img src="images/thegamerbay.jpg" alt="www.thegamerbay.ru" />
         <p><a href="http://www.thegamerbay.ru" target="_blank">TheGamerBay</a></p>
     </div>
