@@ -3,11 +3,11 @@
         $host = strtolower($_SERVER['SERVER_NAME']);
         if (strpos($host, 'artryazanov') === false) {
             header('HTTP/1.1 307 Temporary Redirect');
-            header('Location: http://www.artryazanov.com/404.html');
+            header('Location: //www.artryazanov.com/404.html');
             exit();
         } elseif (!in_array($host, array('www.artryazanov.com', 'artryazanov.local'))) {
             header('HTTP/1.1 303 See Other');
-            header('Location: http://www.artryazanov.com');
+            header('Location: //www.artryazanov.com');
             exit();
         }
     }
@@ -19,7 +19,7 @@
     <title>Artem Ryazanov</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
