@@ -21,6 +21,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
     <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6775199965204956",
+        enable_page_level_ads: true
+      });
+    </script>
 </head>
 <body>
 
