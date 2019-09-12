@@ -32,3 +32,13 @@ cp /vagrant/provision/php.ini /etc/php/7.3/cli/php.ini > /dev/null 2>&1
 
 # Restart Apache
 service apache2 restart
+
+# Installing Composer
+apt-get -y install curl
+curl --silent https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+cd /var/www && composer install
+
+# Set Env
+rm -f /var/www/.env
+cp /vagrant/provision/.env /var/www/.env
