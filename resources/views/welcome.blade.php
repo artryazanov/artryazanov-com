@@ -92,9 +92,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://www.mangkon.com" target="_blank">Mangkon</a>
                     <a href="http://www.thegamerbay.ru" target="_blank">TheGamerBay</a>
-                    <a href="http://www.vrstudio.ru" target="_blank">VrStudio</a>
+                    <a href="http://www.mangkon.com" target="_blank">Mangkon</a>
+                    <a href="http://www.hi2all.ru" target="_blank">Hi2All</a>
+                    <a href="http://www.vrstudio.ru" target="_blank">VRStudio</a>
                     <a href="https://www.linkedin.com/in/artryazanov/" target="_blank">LinkedIn</a>
                 </div>
             </div>
