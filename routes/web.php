@@ -12,10 +12,9 @@
 */
 
 Route::get('/', function () {
-    $host = request()->getHttpHost();
     $appUrl = env("APP_URL", null);
-    if (strpos($appUrl, "//$host") === false) {
-        return redirect($host);
+    if (strpos($appUrl, '//' . request()->getHttpHost()) === false) {
+        return redirect($appUrl);
     } else {
         return view('welcome');
     }
