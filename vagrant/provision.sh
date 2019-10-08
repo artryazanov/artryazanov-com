@@ -11,11 +11,11 @@ apt-get -y install redis-server
 systemctl enable redis-server.service
 
 # Installing PHP
-apt-get -y install ca-certificates apt-transport-https
-wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
-echo "deb https://packages.sury.org/php/ stretch main" | tee /etc/apt/sources.list.d/php.list
+add-apt-repository ppa:ondrej/php
 apt-get update
-apt-get -y install php7.3 php7.3-cli php7.3-common php7.3-opcache php7.3-curl php7.3-mbstring php7.3-mysql php7.3-zip php7.3-xml
+deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
+deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
+apt-get -y install php7.3 php7.3-cli php7.3-common php7.3-opcache php7.3-curl php7.3-mbstring php7.3-mysql php7.3-zip php7.3-xml php7.3-imap
 
 # Install Apache
 apt-get install apache2 -y
