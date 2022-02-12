@@ -11,11 +11,8 @@ apt-get -y install redis-server
 systemctl enable redis-server.service
 
 # Installing PHP
-add-apt-repository ppa:ondrej/php
 apt-get update
-deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
-deb-src http://ppa.launchpad.net/ondrej/php/ubuntu bionic main
-apt-get -y install php7.2 php7.2-cli php7.2-common php7.2-opcache php7.2-curl php7.2-mbstring php7.2-mysql php7.2-zip php7.2-xml php7.2-imap
+apt-get -y install php7.4 php7.4-cli php7.4-common php7.4-opcache php7.4-curl php7.4-mbstring php7.4-mysql php7.4-zip php7.4-xml php7.4-imap
 
 # Install Apache
 apt-get install apache2 -y
@@ -27,8 +24,8 @@ sed -i 's/var\/www\/html/var\/www/g' /etc/apache2/sites-available/000-default.co
 service apache2 restart
 
 # Configuring PHP
-cp /vagrant/provision/php.ini /etc/php/7.2/apache2/php.ini > /dev/null 2>&1
-cp /vagrant/provision/php.ini /etc/php/7.2/cli/php.ini > /dev/null 2>&1
+cp /vagrant/provision/php.ini /etc/php/7.4/apache2/php.ini > /dev/null 2>&1
+cp /vagrant/provision/php.ini /etc/php/7.4/cli/php.ini > /dev/null 2>&1
 
 # Restart Apache
 service apache2 restart
