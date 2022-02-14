@@ -56,10 +56,12 @@
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
+                color: #000;
+                padding-left: 1em;
+                padding-right: 1em;
+                font-size: 1.2em;
                 font-weight: 600;
+                line-height: 3em;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
