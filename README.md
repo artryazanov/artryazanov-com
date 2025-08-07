@@ -2,8 +2,6 @@
 
 A multilingual personal website with a neon retro sci-fi design, featuring interactive elements and automatic language detection.
 
-![Website Preview](logo.png)
-
 ## Features
 
 - **Neon Retro Sci-Fi Design**: Dark background with neon elements, creating a futuristic atmosphere
