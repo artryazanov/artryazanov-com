@@ -1,86 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artem Ryazanov</title>
-
+    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    <!-- Styles -->
+    
     <style>
-        html, body {
-            background-color: #fff;
-            background-image: url("tic-tac-toe.png");
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
+        body {
             margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
+            padding: 0;
+            background-color: #0a0c10;
+            color: #dfe0e4;
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .content {
+            align-items: center;
+            height: 100vh;
             text-align: center;
         }
-
-        .title {
-            font-size: 84px;
+        
+        .loading {
+            font-size: 24px;
+            color: #00fff0;
+            text-shadow: 0 0 5px #00fff0, 0 0 10px #00fff0;
+            animation: pulse 1.5s infinite alternate;
         }
-
-        .links > a {
-            color: #000;
-            padding-left: 1em;
-            padding-right: 1em;
-            font-size: 1.2em;
-            font-weight: 600;
-            line-height: 3em;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
+        
+        @keyframes pulse {
+            from {
+                text-shadow: 0 0 5px #00fff0, 0 0 10px #00fff0;
+            }
+            to {
+                text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="flex-center position-ref full-height">
-        <div class="content">
-
-            <div class="title m-b-md">
-                <img src="logo.png" alt="Artem" width="320" />
-            </div>
-
-            <div class="links">
-                <a href="http://www.hi2all.ru" target="_blank">Hi2All</a>
-                <a href="https://www.thegamerbay.ru" target="_blank">TheGamerBay</a>
-                <a href="https://www.linkedin.com/in/artryazanov/" target="_blank">LinkedIn</a>
-            </div>
-
-        </div>
-    </div>
+    <div class="loading">Loading...</div>
+    
+    <script>
+        // Language detection and redirection
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            let targetPage = 'index_en.html'; // Default to English
+            
+            // Determine which language page to redirect to
+            if (userLang.startsWith('ru')) {
+                targetPage = 'index_ru.html';
+            } else if (userLang.startsWith('th')) {
+                targetPage = 'index_th.html';
+            } else if (userLang.startsWith('zh')) {
+                targetPage = 'index_zh.html';
+            } else if (userLang.startsWith('es')) {
+                targetPage = 'index_es.html';
+            } else if (userLang.startsWith('ar')) {
+                targetPage = 'index_ar.html';
+            }
+            
+            // Redirect to the appropriate language page
+            window.location.href = targetPage;
+        });
+    </script>
 </body>
 </html>
