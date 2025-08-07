@@ -2,6 +2,10 @@
 
 A multilingual personal website with a neon retro sci-fi design, featuring interactive elements and automatic language detection.
 
+Visit the live website: [www.artryazanov.com](https://www.artryazanov.com)
+
+<img src="logo.png" alt="Website Preview" width="1024" style="max-width: 240px;" />
+
 ## Features
 
 - **Neon Retro Sci-Fi Design**: Dark background with neon elements, creating a futuristic atmosphere
