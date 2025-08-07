@@ -4,7 +4,7 @@ A multilingual personal website with a neon retro sci-fi design, featuring inter
 
 Visit the live website: [www.artryazanov.com](https://www.artryazanov.com)
 
-![Website Preview](logo-240x240.png)
+[![Website Preview](logo-240x240.png)](https://www.artryazanov.com)
 
 ## Features
 
