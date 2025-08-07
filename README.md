@@ -1,6 +1,6 @@
 # Artem Ryazanov - Personal Website
 
-A multilingual personal website with a neon retro sci-fi design, featuring interactive elements and automatic language detection.
+A multilingual personal website with a neon retro sci-fi design and an alternative beach theme, featuring interactive elements and automatic language detection.
 
 Visit the live website: [www.artryazanov.com](https://www.artryazanov.com)
 
@@ -8,23 +8,30 @@ Visit the live website: [www.artryazanov.com](https://www.artryazanov.com)
 
 ## Features
 
-- **Neon Retro Sci-Fi Design**: Dark background with neon elements, creating a futuristic atmosphere
+- **Dual Theme Design**:
+  - Dark Theme: Neon retro sci-fi design with dark background and glowing neon elements
+  - Light Theme: Beach-inspired design with warm colors and wave animations
+  - Theme persistence using localStorage
+  - Automatic system theme preference detection
 - **Responsive Layout**: Fully responsive design that works on all devices
 - **Multilingual Support**: Available in 6 languages with automatic language detection
 - **Interactive Elements**:
-  - Star animation background
+  - Star animation background (transforms to beach elements in light theme)
   - Glitch effect on profile picture click
   - Hover animations on all interactive elements
+  - Theme toggle with sun/moon icons
 - **Project Showcase**: Displays personal projects with descriptions and links
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (with CSS Variables)
+- CSS3 (with CSS Variables, Animations, and Transitions)
 - JavaScript (Vanilla)
-- Google Fonts (Orbitron, Roboto, and language-specific fonts)
+  - LocalStorage for theme persistence
+  - Media queries for system theme detection
+- Google Fonts (Orbitron, Roboto, Pacifico, Montserrat, Open Sans)
 - Font Awesome Icons
-- SVG for background grid pattern
+- SVG for background patterns
 
 ## Project Structure
 
@@ -51,6 +58,28 @@ The website automatically detects the user's browser language and redirects to t
 
 Users can manually switch between languages using the language switcher in the top-right corner (top-left for Arabic).
 
+## Theme Support
+
+The website features two distinct themes:
+
+1. **Dark Theme (Default)**: A neon retro sci-fi design with:
+   - Dark background with grid pattern
+   - Neon blue and purple accents
+   - Glowing text effects
+   - Twinkling star animation
+
+2. **Light Theme**: A beach-inspired design with:
+   - Warm sand background with wave patterns
+   - Coral and teal accents
+   - Soft shadows and rounded elements
+   - Floating beach elements animation
+
+The theme system includes:
+- Theme toggle button in the top-left corner
+- Theme persistence using localStorage
+- System theme preference detection
+- Smooth transitions between themes
+
 ## Installation and Usage
 
 1. Clone or download this repository
@@ -76,6 +105,7 @@ Edit the following sections in each language file:
 - Color scheme: Update the CSS variables in the `:root` selector
 - Fonts: Change the Google Fonts import and update the font-family properties
 - Background: Modify the SVG pattern in the `body::before` CSS rule
+- Themes: Adjust the theme-specific styles in the CSS
 
 ### Adding New Languages
 
@@ -91,7 +121,7 @@ To add a new language:
 
 - Fonts: [Google Fonts](https://fonts.google.com/)
 - Icons: [Font Awesome](https://fontawesome.com/)
-- Design inspiration: Neon retro sci-fi aesthetics
+- Design inspiration: Neon retro sci-fi aesthetics and beach themes
 
 ## License
 
