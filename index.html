@@ -48,22 +48,31 @@
     <script>
         // Language detection and redirection
         document.addEventListener('DOMContentLoaded', function() {
-            const userLang = navigator.language || navigator.userLanguage;
-            let targetPage = 'index_en.html'; // Default to English
-            
-            // Determine which language page to redirect to
-            if (userLang.startsWith('ru')) {
-                targetPage = 'index_ru.html';
-            } else if (userLang.startsWith('th')) {
-                targetPage = 'index_th.html';
-            } else if (userLang.startsWith('zh')) {
-                targetPage = 'index_zh.html';
-            } else if (userLang.startsWith('es')) {
-                targetPage = 'index_es.html';
-            } else if (userLang.startsWith('ar')) {
-                targetPage = 'index_ar.html';
+            const savedLang = localStorage.getItem('lang');
+            const validLangs = ['en', 'ru', 'th', 'zh', 'es', 'ar'];
+            let targetPage;
+
+            if (savedLang && validLangs.includes(savedLang)) {
+                // Use saved language preference
+                targetPage = `index_${savedLang}.html`;
+            } else {
+                // Determine language based on browser settings
+                const userLang = navigator.language || navigator.userLanguage;
+                targetPage = 'index_en.html'; // Default to English
+
+                if (userLang.startsWith('ru')) {
+                    targetPage = 'index_ru.html';
+                } else if (userLang.startsWith('th')) {
+                    targetPage = 'index_th.html';
+                } else if (userLang.startsWith('zh')) {
+                    targetPage = 'index_zh.html';
+                } else if (userLang.startsWith('es')) {
+                    targetPage = 'index_es.html';
+                } else if (userLang.startsWith('ar')) {
+                    targetPage = 'index_ar.html';
+                }
             }
-            
+
             // Redirect to the appropriate language page
             window.location.href = targetPage;
         });
